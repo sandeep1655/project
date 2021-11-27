@@ -1,0 +1,196 @@
+<html>
+<head>
+<style>
+html{
+scroll-behavior:smooth;
+}
+body{
+margin:0;
+padding:0;
+font-family:"Times New Roman", Times, Serif;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  opacity:0.9;
+   overflow:hidden;
+  
+}
+li {
+  float: left;
+}
+li a {
+  display:block;
+  color: white;
+  text-align: center;
+  padding: 14px 14px;
+  text-decoration: none;
+  font-size:23px;
+  -webkit-tranisition:0.6s ease;
+  tranisition:0.6s ease; 
+}
+.navbar{
+width:100%;
+height:auto;
+overflow:auto;
+}
+li a:hover{
+ color:#05fdff;
+}
+.bimage{
+background-image:url("auto4.jpg");
+background-color:rgb(102, 11, 121,1);
+background-repeat:no-repeat;
+background-size:cover;
+width:100%;
+height:700px;
+opacity:0.8;
+overflow:hidden;
+-webkit-tranisition:0.6s ease;
+  tranisition:0.6s ease;
+ }
+ #myBtn{
+ background-color:#001011;
+ color:white;
+ font-size:15px;
+ padding:20px 60px;
+ border-radius:50px;
+ cursor:pointer;
+ }
+ #myBtn:hover{
+ background-color:white;
+ color:#001011;
+ border-color:#001011;
+ }
+ 
+ li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+ .dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.contactus{
+width:100%;
+background-color:rgba(39, 43, 43, 0.83);
+height:400px;
+
+}
+.conone{
+width:33.3%;
+float:left;
+margin:0px auto;
+}
+.contwo{
+width:33.3%;
+float:left;
+}
+.conthree{
+width:33.3%;
+float:left;
+}
+</style>
+</head>
+<body>
+<div class="bimage">
+<div class="navbar">
+<ul>
+	  <li><a class="active" href="#home">Home</a></li>
+	  <li><a href="#p3">services</a></li>
+	  <li><a href="#p4">features</a></li>
+	  <li><a href="#p5">About us</a></li>
+	  <li><a href="#p6">contact us</a></li>
+	  <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">Login</a>
+       <div class="dropdown-content">
+         <a href="userlogin.html">user</a>
+         <a href="driverlogin.html">driver</a>
+      </div>
+	  </li>
+	  <li class="main" style="float:right;margin-right:20px"><h3 style="color:#05fdff;font-size:23px;">EASY-T</h3></li>
+</ul>
+</div>
+<center>
+<h2 style="font-size:45px;">EASY-T</h2>
+<br>
+<br>
+<br>
+<h1>Explore our services</h1>
+<button id="myBtn" onclick="location.href='userlogin.html'">signin</button>
+</center>
+</div>
+<div class="about us" id="p3">
+<center>
+<h2  style="font-size:50px;">Services</h2>
+<h3>we make transportation easy</h3>
+<h3>our system provides the best services of transportation for school children</h3>
+
+</center>
+</div>
+<div class="contact us" id="p4">
+<center>
+<h2  style="font-size:50px;">features</h2>
+<h3>our system features includes monthly payments</h3>
+<h3>avoid traffic congestion</h3>
+<h3>switch to EASY-T</h3>
+</center>
+</div>
+<div class="contact us" id="p5">
+<center>
+<h3  style="font-size:50px;">About us</h3>
+<h3> EASY-T transporation is a system that makes school students to travel from their home location to their school destination in three wheeler vehicles.</h3>
+<h3>This system is made available for the parents and they can monitor and can have control over this web service.</h3>
+<h3>This system is facilitated to use with a low fare.</h3>
+</center>
+</div>
+<div class="contactus" id="p6">
+<center>
+<h3  style="font-size:40px;color:white">Contact us</h3>
+<div class="conone">
+<h2 style="color:white">EASY-T copy rights reserved</h2>
+<h2 style="color:white">Easy-T corporation</h2>
+<h2 style="color:white">hyderabad</h2>
+<h2 style="color:white">vishakapatnam</h2>
+</div>
+<div class="contwo">
+<h1 style="color:white">Email us</h1>
+<h1 style="color:white">easyt@gmail.com</h1>
+
+</div>
+<div class="conthree">
+</div>
+</center>
+</div>
+</body>
+</html>
