@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body {font-family: Arial, Helvetica, sans-serif;}
+.one{
+width:40%;
+margin:0px auto;
+height:auto;
+border: 1px solid;
+padding: 10px;
+box-shadow: 5px 10px #888888;
+background-color:#e3e2e8;
+}
+.two{
+width:60%;
+margin:0px auto;
+}
+
+input[type=text], input[type=password] {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+input[type=submit]{
+background-color:#07187b;
+color:white;
+border:2px solid #07187b;
+font-size:15px;
+padding:15px 35px;
+border-radius:50px;
+cursor:pointer;
+margin: 8px 0;
+}
+input[type=submit]:hover{
+background-color:white;
+color:#07187b;
+border-color:50px;
+}
+
+.cancelbtn {
+ background-color:red;
+color:white;
+border:2px solid red;
+font-size:15px;
+padding:10px 20px;
+border-radius:50px;
+cursor:pointer;
+margin: 8px 0;
+}
+.cancelbtn:hover{
+background-color:white;
+color:red;
+border-color:50px;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+<a href="main.html">HOME</a>
+<div class="one">
+<h2 style="color:#07187b"zz><center>LOGIN</center></h2>
+<div class="two">
+<form method="post" action="upprofile.html">
+    <label for="uname"><b>Username</b></label><br>
+    <input type="text" placeholder="Enter Username" name="uname" required><br>
+
+    <label for="psw"><b>Password</b></label><br>
+    <input type="password" placeholder="Enter Password" name="psw" required><br>
+	<input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+        
+   <center><input type="submit" value="Login"></center>
+    <label>
+	</form>  
+</div>
+    <button type="button" class="cancelbtn">Cancel</button>
+	<a href="ownreg.html">register as owner</a>
+	<a href="userreg.html">register as user</a>
+	<a href="admin.html">admin login</a>
+    <span class="psw"><a href="repass.html">forgotpassword?</a></span>
+  </div>
+</body>
+</HTML>

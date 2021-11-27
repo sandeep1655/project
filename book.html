@@ -1,0 +1,119 @@
+<html>
+<head>
+<style>
+.one{
+width:50%;
+margin:0px auto;
+height:600px;
+border: 1px solid;
+padding: 10px;
+box-shadow: 5px 10px #888888;
+background-color:#e3e2e8;
+}
+.two{
+width:70%;
+margin:0px auto;
+}
+select {
+  width: 60%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=time] {
+  width: 60%;
+  padding: 12px 20px;
+  margin: 2px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=submit]{
+background-color:#07187b;
+color:white;
+border:2px solid #07187b;
+font-size:15px;
+padding:15px 35px;
+border-radius:50px;
+cursor:pointer;
+margin: 8px 0;
+}
+input[type=submit]:hover{
+background-color:white;
+color:#07187b;
+border-color:50px;
+}
+
+</style>
+</head>
+<body>	
+<script>
+var d = new Date();
+document.getElementById("demo").innerHTML =d;
+</script>
+<div class="one">
+<form method="post" action="pay.html">
+<center>
+<h1 style="color:#07187b">Book your vehicle</h1>
+</center>
+<div class="two">
+<p id="demo"></p>
+<select id="pickup" onchange="change_school(this.value)" class="frm-field required">
+<option value="dabal">cab</option>
+<option value="mulugu road">three wheeler</option>
+<option value="default" selected>select vehicle</option>
+</select> <br>
+<select id="yes" onchange="change_school(this.value)" class="frm-field required">
+<option value="dabal">2</option>
+<option value="mulugu road">3</option>
+<option value="mulugu road">4</option>
+<option value="default" selected>select no of travellers</option>
+</select> 
+<select id="pickup" onchange="change_school(this.value)" class="frm-field required">
+<option value="dabal">dabal,hanamkonda</option>
+<option value="mulugu road">mulugu road,hanamkonda</option>
+<option value="bhimaram">bhimaram,hanamkonda</option>
+<option value="naimnagar">naimnagra,hanamkonda</option>
+<option value="NGO'scolony">NGO's colony,hanamkonda</option>
+<option value="ashoka">ashoka,hanamkonda</option>
+<option value="hunterroad">hunter road,hanamkonda</option>
+<option value="labercolony">labercolony,warangal</option>
+<option value="vikasnagar">vikas nagar,hanamkonda</option>
+<option value="petrolpump">petrol pump,hanamkonda</option>
+<option value="newshampet">newshampet,hanamkonda</option>
+<option value="prashanthnagar">prashanth nagar,hanamkonda</option>
+<option value="vivekcolony">vivek colony,hanamkonda</option>
+<option value="sandeepnagar">sandeeep nagar,hanamkonda</option>
+<option value="default" selected>pick up location</option>
+</select>
+<select id="droplocation" onchange="change_pickup location(this.value)" class="frm-field required">
+<option value="shinehighschool">shine high school,NGO's colony,hanamkond</option>
+<option value="vikashighschool">vikas high school,naimnagar,hanamkonda</option>
+<option value="vigneshhighschool">vignesh high school,muluguroad,warangal </option>
+<option value="prashanthmodelschool">prashanth model school,postofffice,warangal</option>
+<option value="sandeeepIITschool">sandeep IIT school,naimnagar,hanamkonda</option>
+<option value="spectrahighschool">spectra high school,hunterroad,hanamkonda</option>
+<option value="default" selected>drop location</option>
+</select>
+<h4 style="margin-bottom:4px">Time:</h4>
+<input type="time" name="time"><br>
+<h4 style="margin-bottom:4px">(return)Time:</h4>
+<input type="time" name="time"><br>
+<script>
+var d = new Date();
+document.getElementById("demo").innerHTML =d;
+</script>
+<center>
+<input type="submit" value="BOOK" name="book">
+
+</center>
+
+</div>
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.conone{
+width:50%;
+float:left;
+}
+.contwo{
+width:40%;
+float:left;
+margin-left:20px;
+}
+.container {
+ width:70%;
+margin:0px auto;
+height:800px;
+border: 1px solid;
+padding: 10px;
+box-shadow: 5px 10px #888888;
+background-color:#e3e2e8;
+}
+.clearfix
+{
+overflow:auto;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 80%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline;
+
+}
+input[type=reset]{
+background-color:red;
+color:white;
+border:2px solid red;
+font-size:15px;
+padding:15px 25px;
+border-radius:50px;
+cursor:pointer;
+margin: 8px 0;
+}
+input[type=reset]:hover{
+background-color:white;
+color:red;
+border-color:50px;
+}
+
+
+/* Overwrite default styles of hr */
+
+
+/* Set a style for the submit button */
+input[type=submit]{
+background-color:#07187b;
+color:white;
+border:2px solid #07187b;
+font-size:15px;
+padding:15px 35px;
+border-radius:50px;
+cursor:pointer;
+margin: 8px 0;
+}
+input[type=submit]:hover{
+background-color:white;
+color:#07187b;
+border-color:50px;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<a href="main.html">HOME</a>
+
+<form action="driverp.html" name="myForm" method="post" onsubmit="return(validate())";>
+  <div class="container">
+  <div class="clearfix">
+
+   <center> <h1 style="color:#07187b">EASYTvehicleRegistration</h1></center>
+	<div class="conone">
+	<p><b>personal details</b></p>
+    <hr>
+	<label for="name"><b>name</b></label><br>
+    <input type="text" placeholder="Enter name" name="dname" ><br>
+	
+	<label for="mobileno"><b>phone no</b></label><br>
+    <input type="text" placeholder="Enter phone no" name="dphoneno" ><br>
+
+    <label for="email"><b>Email</b></label><br>
+    <input type="text" placeholder="Enter Email" name="demail" ><br>
+
+    <label for="psw"><b>Password</b></label><br>
+    <input type="password" placeholder="Enter Password" name="dpassword" ><br>
+
+    <label for="psw-repeat"><b>Repeat Password</b></label><br>
+    <input type="password" placeholder="Repeat Password" name="dcpassword" ><br>
+	</div>
+	<div class="contwo">
+	<p><b>vehicle details</b></p>
+	<hr>
+	<label for="vtype"><b>vehicle type</b></label><br><br>
+	<select>
+	<option name="3wheeler">3wheeler</option>
+	<option name="2wheeler">2wheeler</option>
+	</select><br><br>
+	
+	<label for="uploadimage"><b>vehicle image</b></label><br><br>
+    <input type="file" placeholder="max size 200kb" name="vimage"><br><br>	
+	
+	<label for="uploadimage"><b>vehicle document</b></label><br><br>
+    <input type="file" placeholder="max size 200kb" name="vdoc"><br><br>
+    </div>
+	</div>
+    <p><input type="checkbox" name="check" required>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+    <center><input type="submit" class="registerbtn" value="register">
+	<input type="reset" value="Reset"></center><br>
+	 <p style="margin-top:0px">Already have an account? <a href="driverlogin.html">Sign in</a>.</p>
+  </div>
+  
+   
+</form>
+<script type = "text/javascript">
+   <!--
+      // Form validation code will come here.
+      function validate() {
+      
+         if( document.myForm.dname.value == "" ) {
+            alert( "Please provide your name!" );
+            document.myForm.dname.focus() ;
+            return false;
+         }
+		 if( document.myForm.dphoneno.value == "" || isNaN( document.myForm.dphoneno.value ) ||
+            document.myForm.dphoneno.value.length != 10  ) {
+            alert( "Please provide a valid mobile number!" );
+            document.myForm.dphoneno.focus() ;
+            return false;
+         }
+        
+		 var emailID = document.myForm.demail.value;
+         atpos = emailID.indexOf("@");
+         dotpos = emailID.lastIndexOf(".");
+         
+         if (atpos < 1 || ( dotpos - atpos < 2 )) {
+            alert("Please enter correct email ID")
+            document.myForm.demail.focus() ;
+            return false;
+         }
+        
+		 
+		 if( document.myForm.dpassword.value == "" ) {
+            alert( "Please provide your password!" );
+            return false;
+         return( true );
+      }
+	  if( document.myForm.dcpassword.value == "" || document.myForm.dcpassword.value != document.myForm.dpassword.value ) {
+            alert( "your password and confirm password donot match" );
+            return false;
+         return( true );
+      } 
+	  }
+   //-->
+</script>
+
+</body>
+</html>

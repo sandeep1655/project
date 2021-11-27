@@ -1,0 +1,108 @@
+<html>
+<head>
+<title>userprofile</title>
+
+<style type="text/css">
+
+
+.one{
+width:70%;
+margin:0px auto;
+height:690px;
+border: 1px solid;
+padding: 10px;
+box-shadow: 5px 10px #888888;
+background-color:#e3e2e8;
+}
+.four{
+width:50%;
+float:left;
+}
+.three{
+width:50%;
+float:left;
+margin:0px auto;
+}
+.two{
+overflow:auto;
+}
+input[type=text], input[type=password], input[type=date]{
+  width: 80%;
+  padding: 15px;
+  margin: 5px 0 2px 0;
+  display: inline;
+}
+input[type=submit]{
+background-color:#07187b;
+color:white;
+border:2px solid #07187b;
+font-size:15px;
+padding:15px 35px;
+border-radius:50px;
+cursor:pointer;
+margin: 8px 0;
+}
+input[type=submit]:hover{
+background-color:white;
+color:#07187b;
+border-color:50px;
+}
+.cancelbtn {
+ background-color:red;
+color:white;
+border:2px solid red;
+font-size:15px;
+padding:10px 20px;
+border-radius:50px;
+cursor:pointer;
+margin: 8px 0;
+}
+.cancelbtn:hover{
+background-color:white;
+color:red;
+border-color:50px;
+}
+select {
+  width: 60%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+</style>
+</head>
+<body>
+<a href="main.html">HOME</a>
+<div class="one">
+<center><h1 style="color:#07187b">EASY-T users Profile</h1></center>
+
+<form method="post" action="book.html">
+<div class="three">
+<h3>users Details</color></h3><br>
+<select id="pickup" onchange="change_school(this.value)" class="frm-field required">
+<option value="dabal">cab</option>
+<option value="mulugu road">three wheeler</option>
+<option value="default" selected>select vehicle</option>
+</select> <br>
+<select id="yes" onchange="change_school(this.value)" class="frm-field required">
+<option value="dabal">2</option>
+<option value="mulugu road">3</option>
+<option value="mulugu road">4</option>
+<option value="default" selected>select no of travellers</option>
+</select> 
+</p>
+</div>
+
+
+
+               <center>
+			        <input name="submit" type="submit" value="proceed to book">
+                    <input name="Reset" class="cancelbtn" type="Reset">
+				</center>
+				</form>
+</div>
+</body>
+</html>

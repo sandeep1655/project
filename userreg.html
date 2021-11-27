@@ -1,0 +1,224 @@
+<html>
+<head>
+<style>
+.one{
+width:70%;
+margin:0px auto;
+height:600px;
+border: 1px solid;
+padding: 10px;
+box-shadow: 5px 10px #888888;
+height:800px;
+background-color:#e3e2e8;
+}
+.two{
+margin-left:20px;
+width:40%;
+float:left;
+}
+.three{
+margin-left:40px;
+width:50%;
+float:left;
+}
+.four{
+overflow:auto;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+
+ 
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+input[type=submit]{
+background-color:#07187b;
+color:white;
+border:2px solid #07187b;
+font-size:15px;
+padding:15px 35px;
+border-radius:50px;
+cursor:pointer;
+margin: 8px 0;
+}
+input[type=reset]{
+background-color:red;
+color:white;
+border:2px solid red;
+font-size:15px;
+padding:15px 25px;
+border-radius:50px;
+cursor:pointer;
+margin: 8px 0;
+}
+input[type=reset]:hover{
+background-color:white;
+color:red;
+border-color:50px;
+}
+input[type=submit]:hover{
+background-color:white;
+color:#07187b;
+border-color:50px;
+}
+</style>
+</head>
+<body>
+<div class="one">
+<center>
+<h1 style="color:#07187b">User Registration<h1>
+</center>
+<a href="main.html">HOME</a>
+<form method="post" name="myForm" action="userlogin.html" onsubmit="return(validate())";> 
+
+<div class="four">
+<div class="two">
+<h4>
+First Name: <br><input type="text" name="fname" placeholder="First Name" ><br>
+Last Name: <br> <input type="text" name="lname" placeholder="Last Name"><br>
+Date of Birth:<br>
+<input type="date" name="dob"><br><br>
+
+Gender:<br>  <input type="radio" value="gender" name="gender" >male
+<input type="radio" value="gender" name="gender" >female<br><br>
+Email:<br>   <input type="text" placeholder="enter email" name="email"><br>
+Password:<br><input type="password" name="password" placeholder="Password" ><br>
+
+</div>
+<div class="three">		 
+
+Re-Type Password:<br><input type="Password" name="cpassword" placeholder="Password" ><br>
+Address:<br><textarea rows="2" cols="30" name="address"></textarea><br>
+City:<br><input type="text" name="city" placeholder="City"><br> 
+State:<br><input type="text" name="state" placeholder="State"><br>
+Pin_Code:<br><input type="text" name="pin" placeholder="Pin_Code"><br>
+</div>
+</div>
+<center><input type="checkbox" value="Accept" name="check5" required> Accepting terms & conditions<br>
+<input type="submit" value="Submit" name="submit">
+<input type="reset" value="Reset"></center><br><br>
+
+</h4>
+
+</form>	
+</div>
+<script type = "text/javascript">
+   <!--
+      // Form validation code will come here.
+      function validate() {
+      
+         if( document.myForm.fname.value == "" ) {
+            alert( "Please provide your firstname!" );
+            document.myForm.fname.focus() ;
+            return false;
+         }
+         if( document.myForm.lname.value == "" ) {
+            alert( "Please provide your lastname!" );
+            document.myForm.lname.focus() ;
+            return false;
+         }
+		 if( document.myForm.dob.value == "" ) {
+            alert( "Please provide your date of birth!" );
+            return false;
+         }
+		 if( document.myForm.gender.value == "" ) {
+            alert( "Please provide your gender!" );
+            return false;
+         }
+		 var emailID = document.myForm.email.value;
+         atpos = emailID.indexOf("@");
+         dotpos = emailID.lastIndexOf(".");
+         
+         if (atpos < 1 || ( dotpos - atpos < 2 )) {
+            alert("Please enter correct email ID")
+            document.myForm.email.focus() ;
+            return false;
+         }
+         return( true );
+		 
+		 if( document.myForm.password.value == "" ) {
+            alert( "Please provide your password!" );
+            return false;
+         return( true );
+      }
+	  if( document.myForm.password.value == "" || document.myForm.cpassword.value != document.myForm.password.value ) {
+            alert( "your password and confirm password donot match" );
+            return false;
+         return( true );
+      }
+	  if( document.myForm.address.value == "" ) {
+            alert( "Please provide your Address!" );
+            document.myForm.address.focus() ;
+            return false;
+         }
+		 if( document.myForm.city.value == "" ) {
+            alert( "Please provide your city!" );
+            document.myForm.city.focus() ;
+            return false;
+         }
+		 if( document.myForm.state.value == "" ) {
+            alert( "Please provide your state!" );
+            document.myForm.state.focus() ;
+            return false;
+         }
+         if( document.myForm.pin.value == "" || isNaN( document.myForm.pin.value ) ||
+            document.myForm.pin.value.length != 6 ) {
+            
+            alert( "Please provide a pin in the format ######." );
+            document.myForm.pin.focus() ;
+            return false;
+         }
+         
+		 
+	  }
+   //-->
+</script>
+</body></html>
